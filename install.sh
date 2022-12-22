@@ -7,7 +7,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
 # Link files
-mv ~/.vimrc ~/.vimrc.bak
-mv ~/.zshrc ~/.zshrc.bak
+[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.bak
+[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
