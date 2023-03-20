@@ -87,11 +87,8 @@ if [ -e $HOME/.zshrc.local ]; then
   source $HOME/.zshrc.local 
 fi
 
-<<<<<<< Updated upstream
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
-=======
->>>>>>> Stashed changes
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
