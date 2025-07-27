@@ -1,0 +1,37 @@
+" Set the leader key to comma
+let mapleader = ","
+
+" Enable line numbers
+set relativenumber
+set number
+
+" Turn off bell sound
+set visualbell
+
+" Improve search behavior
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" Plugins
+Plug 'preservim/nerdtree'
+
+" Open NerdTree at current file
+nnoremap <leader>o :NERDTreeFind<CR>
+
+map <Leader>d <Action>(GotoDeclaration)
+map <Leader>i <Action>(GotoImplementation)
+map <Leader>u <Action>(FindUsages)
+map <Leader>g <Action>(Generate)
+
+map <Leader>R <Action>(Refactorings.QuickListPopupAction)
+
+" Trigger Ctrl-R replace action
+map <Leader>r <Action>(Replace)
+
+" Yank to system clipboard (if supported)
+vnoremap <leader>y "+y
+nnoremap <leader>y "+yy
+
+
