@@ -1,0 +1,53 @@
+{
+    "workbench.colorTheme": "Monokai",
+
+    // Vim plugin config
+    "vim.leader": ",",
+    "vim.handleKeys": {
+        "<C-w>": false
+    },
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<leader>", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        {
+            "before": ["<leader>", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        {
+            "before": ["<leader>", "u"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        {
+            "before": ["<leader>", "g"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["<leader>", "R"],
+            "commands": ["editor.action.refactor"]
+        },
+        {
+            "before": ["<leader>", "r"],
+            "commands": ["editor.action.startFindReplaceAction"]
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["actions.find"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+    ],
+
+    // Editor preferences
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
+}
+
