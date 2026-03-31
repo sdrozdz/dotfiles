@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Monokai",
 
     // Vim plugin config
     "vim.leader": ",",
@@ -43,11 +42,13 @@
         {
             "before": ["<leader>", "t"],
             "commands": ["workbench.action.quickOpen"]
-        },
+        }
     ],
 
     // Editor preferences
     "editor.tabSize": 4,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font"
 }
 
