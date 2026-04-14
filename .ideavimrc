@@ -25,6 +25,12 @@ map <Leader>i <Action>(GotoImplementation)
 map <Leader>u <Action>(FindUsages)
 map <Leader>g <Action>(Generate)
 
+" Navigate to class (Leader + t)
+map <Leader>t <Action>(GotoClass)
+" Navigate to class (Leader + T)
+map <Leader>T <Action>(GotoFile)
+
+
 map <Leader>R <Action>(Refactorings.QuickListPopupAction)
 
 " Trigger Ctrl-R replace action
