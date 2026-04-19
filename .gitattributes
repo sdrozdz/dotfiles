@@ -1,0 +1,7 @@
+# Handle line endings automatically
+* text=auto eol=lf
+
+# Ensure specific binary files (like images or fonts) aren't messed with
+*.png binary
+*.jpg binary
+*.ttf binary
