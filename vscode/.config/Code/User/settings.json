@@ -45,10 +45,14 @@
         }
     ],
 
-    // Editor preferences
     "editor.tabSize": 4,
     "editor.detectIndentation": false,
 
-    "terminal.integrated.fontFamily": "MesloLGL Nerd Font"
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+    "chat.disableAIFeatures": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "kilo-code.new.agentManagerOpen",
+        "kilo-code.new.agentManager.showTerminal"
+    ]
 }
 

@@ -2,10 +2,9 @@
 #Aliases
 Set-Alias ll ls
 Set-Alias vim nvim
-#Set-Alias docker podman
 
 #Prompt
-oh-my-posh init pwsh --config "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/json.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:USERPROFILE\.oh-my-posh\themes\negligible.omp.json" | Invoke-Expression
 
 #Terminal Icons
 Import-Module Terminal-Icons

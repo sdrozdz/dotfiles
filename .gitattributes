@@ -1,6 +1,9 @@
 # Handle line endings automatically
 * text=auto eol=lf
 
+# PowerShell scripts need CRLF
+*.ps1 text eol=crlf
+
 # Ensure specific binary files (like images or fonts) aren't messed with
 *.png binary
 *.jpg binary
