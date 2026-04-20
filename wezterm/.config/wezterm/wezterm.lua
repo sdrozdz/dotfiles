@@ -2,8 +2,16 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local act = wezterm.action
 
+local function is_windows()
+  return wezterm.target_triple:find("windows") ~= nil
+end
+
+if is_windows() then
+  config.default_domain = 'WSL:Ubuntu-24.04'
+end
+
 -- Colors
-config.color_scheme = "Github Dark (Gogh)"
+config.color_scheme = "Catppuccin Mocha (Gogh)"
 
 -- Font settings
 config.font_size = 13
@@ -12,6 +20,7 @@ config.font = wezterm.font("MesloLGL Nerd Font")
 -- Appearance
 config.window_decorations = "RESIZE"
 config.enable_wayland = true
+config.window_background_opacity = 0.9
 
 -- Keybidings
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 2000 }

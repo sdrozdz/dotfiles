@@ -5,6 +5,7 @@ $links = @{
     "$env:APPDATA\Code\User\keybindings.json" = "$DOTFILES\vscode\.config\Code\User\keybindings.json"
     "$env:APPDATA\Code\User\settings.json" = "$DOTFILES\vscode\.config\Code\User\settings.json"
     "$env:USERPROFILE\Documents\WindowsPowerShell\profile.ps1" = "$DOTFILES\windows\profile.ps1"
+    "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" = "$DOTFILES\windows\profile.ps1"
     "$env:XDG_CONFIG_HOME\wezterm" = "$DOTFILES\wezterm\.config\wezterm"
 }
 

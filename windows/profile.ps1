@@ -4,7 +4,7 @@ Set-Alias ll ls
 Set-Alias vim nvim
 
 #Prompt
-oh-my-posh init pwsh --config "$env:USERPROFILE\.oh-my-posh\themes\negligible.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:LOCALAPPDATA/Programs/oh-my-posh/themes/negligible.omp.json" | Invoke-Expression
 
 #Terminal Icons
 Import-Module Terminal-Icons
