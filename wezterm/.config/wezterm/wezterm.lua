@@ -7,7 +7,7 @@ local function is_windows()
 end
 
 if is_windows() then
-  config.default_domain = 'WSL:Ubuntu-24.04'
+  config.default_domain = 'WSL:Ubuntu'
 end
 
 -- Colors

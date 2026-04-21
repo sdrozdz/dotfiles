@@ -53,6 +53,12 @@
     "terminal.integrated.commandsToSkipShell": [
         "kilo-code.new.agentManagerOpen",
         "kilo-code.new.agentManager.showTerminal"
-    ]
+    ],
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
 }
 
