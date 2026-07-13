@@ -4,7 +4,7 @@ Set-Alias ll ls
 Set-Alias vim nvim
 
 #Prompt
-oh-my-posh init pwsh --config "$env:LOCALAPPDATA/Programs/oh-my-posh/themes/negligible.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:USERPROFILE/.oh-my-posh/themes/negligible.omp.json" | Invoke-Expression
 
 #Terminal Icons
 Import-Module Terminal-Icons
@@ -28,5 +28,6 @@ Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 #Shows tooltip during completion
 Set-PSReadLineOption -ShowToolTips
 
-#Gives completions/suggestions from historical commands
-Set-PSReadLineOption -PredictionSource History
+if ($Host.Name -eq 'ConsoleHost' -and -not [Console]::IsOutputRedirected) {
+    Set-PSReadLineOption -PredictionSource History
+}
