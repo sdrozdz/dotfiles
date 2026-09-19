@@ -21,7 +21,13 @@ config.color_scheme = "Catppuccin Mocha"
 config.term = "xterm-256color"
 
 -- Font settings
-config.font_size = 13
+if is_windows then
+	config.font_size = 11
+elseif is_mac then 
+	config.font_size = 16
+else
+	config.font_size = 13
+end
 config.font = wezterm.font("MesloLGL Nerd Font")
 
 -- Appearance
@@ -30,8 +36,25 @@ config.window_background_opacity = 1
 config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
 
+-- Tabs
+if is_windows then
+	wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+	  -- 1. Check if an escape sequence (like our Zsh hook) set a tab title
+	  local title = tab.tab_title
+	  
+	  -- 2. Fallback to active pane title if no explicit tab title exists
+	  if not title or #title == 0 then
+		title = tab.active_pane.title
+	  end
+
+	  return {
+		{ Text = ' ' .. title .. ' ' },
+	  }
+	end)
+end
+
 -- Keybidings
-config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 2000 }
+config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
 	{
 		key = "s",
