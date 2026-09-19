@@ -75,3 +75,28 @@ alias c='clear'
 if [ -e $HOME/.zshrc.local ]; then
   source $HOME/.zshrc.local 
 fi
+
+# Function to send the current folder name to WezTerm as the window/tab title
+update_wezterm_title() {
+  # %1~ gives just the current folder name (e.g., "project-repo" or "~")
+  local dir_name=$(print -P "%1~")
+  
+  # Zsh's print processes escapes by default, so we only need -n (no newline)
+  print -n "\e]2;$dir_name\a"
+}
+
+# Function to send the current working directory to WezTerm
+function __wezterm_osc7() {
+  if hash wezterm 2>/dev/null; then
+    # Use WezTerm's helper command to set the working directory if available
+    wezterm set-working-directory 2>/dev/null && return
+  fi
+  # Fallback: Send the current working directory to the terminal using OSC 7
+  printf "\033]7;file://%s%s\033\\" "${HOSTNAME}" "${PWD}"
+}
+
+# Zsh hooks: run this function on directory change (chpwd) and before initial prompt (precmd)
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd update_wezterm_title
+add-zsh-hook precmd update_wezterm_title
+add-zsh-hook precmd __wezterm_osc7
