@@ -36,6 +36,9 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 1
 config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
+config.window_frame = {
+	font_size = 13.0,
+}
 
 -- Tabs
 wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
@@ -48,7 +51,7 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
   end
 
   return {
-	{ Text = ' ' .. title .. ' ' },
+	{ Text = '  ' .. title .. '  ' },
   }
 end)
 
