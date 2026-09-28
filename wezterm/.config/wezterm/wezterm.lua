@@ -17,7 +17,8 @@ if is_mac then
 end
 
 -- Colors
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Hemisu Dark (Gogh)"
+config.color_scheme = "Horizon Dark (Gogh)"
 config.term = "xterm-256color"
 
 -- Font settings
