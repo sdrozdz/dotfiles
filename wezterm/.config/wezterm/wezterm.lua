@@ -82,6 +82,11 @@ config.keys = {
 		mods = "LEADER",
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
+	{
+		key = "z",
+		mods = "LEADER",
+		action = act.TogglePaneZoomState,
+	},
 }
 
 -- ALT: primary actions
