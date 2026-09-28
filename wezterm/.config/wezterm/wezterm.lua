@@ -57,6 +57,22 @@ end)
 config.leader = { key = " ", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
 	{
+		key = "=",
+		mods = "LEADER",
+		action = wezterm.action_callback(function(window)
+			local overrides = window:get_config_overrides() or {}
+			local current_scheme = overrides.color_scheme or config.color_scheme
+
+			if current_scheme == "Horizon Dark (Gogh)" then
+				overrides.color_scheme = "Horizon Bright (Gogh)"
+			else
+				overrides.color_scheme = "Horizon Dark (Gogh)"
+			end
+
+			window:set_config_overrides(overrides)
+		end),
+	},
+	{
 		key = "s",
 		mods = "LEADER",
 		action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }),
