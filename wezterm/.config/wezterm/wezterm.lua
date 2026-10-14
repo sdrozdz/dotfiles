@@ -88,7 +88,7 @@ config.keys = {
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
-		key = "z",
+		key = "f",
 		mods = "LEADER",
 		action = act.TogglePaneZoomState,
 	},
