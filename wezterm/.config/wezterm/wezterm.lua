@@ -17,8 +17,10 @@ if is_mac then
 end
 
 -- Colors
--- config.color_scheme = "Hemisu Dark (Gogh)"
-config.color_scheme = "Horizon Dark (Gogh)"
+local DARK_THEME = "Classic Dark (base16)"
+local LIGHT_THEME = "Google (light) (terminal.sexy)"
+
+config.color_scheme = DARK_THEME
 config.term = "xterm-256color"
 
 -- Font settings
@@ -66,10 +68,10 @@ config.keys = {
 			local overrides = window:get_config_overrides() or {}
 			local current_scheme = overrides.color_scheme or config.color_scheme
 
-			if current_scheme == "Horizon Dark (Gogh)" then
-				overrides.color_scheme = "Horizon Bright (Gogh)"
+			if current_scheme == DARK_THEME then
+				overrides.color_scheme = LIGHT_THEME
 			else
-				overrides.color_scheme = "Horizon Dark (Gogh)"
+				overrides.color_scheme = DARK_THEME
 			end
 
 			window:set_config_overrides(overrides)
