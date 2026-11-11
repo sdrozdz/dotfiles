@@ -1,0 +1,61 @@
+{
+  "agentMode": "accept-edits",
+  "model": "Gemini 3.8 Flash (Medium)",
+  "permissions": {
+    "allow": [
+      "read_file(/home/sebastian/src/)",
+      "write_file(/home/sebastian/src/)",
+      "read_url(github.com)",
+      "read_url(api.github.com)",
+      "read_url(raw.githubusercontent.com)",
+      "read_url(gist.githubusercontent.com)",
+      "command(curl)",
+      "command(gh)",
+      "command(python3)",
+      "command(python)",
+      "command(uv)",
+      "command(git)",
+      "command(ls)",
+      "command(cd)",
+      "command(pwd)",
+      "command(tree)",
+      "command(find)",
+      "command(fd)",
+      "command(rg)",
+      "command(grep)",
+      "command(cat)",
+      "command(head)",
+      "command(tail)",
+      "command(sed)",
+      "command(awk)",
+      "command(jq)",
+      "command(yq)",
+      "command(wc)",
+      "command(sort)",
+      "command(uniq)",
+      "command(cut)",
+      "command(tr)",
+      "command(diff)",
+      "command(stat)",
+      "command(file)",
+      "command(realpath)",
+      "command(dirname)",
+      "command(basename)",
+      "command(which)",
+      "command(echo)",
+      "command(printf)",
+      "command(zsh)",
+      "command(bash)",
+      "command(docker run --rm otel/opentelemetry-collector-contrib:0.161.0)"
+    ],
+    "deny": [
+      "command(rm -rf)",
+      "command(sudo)"
+    ]
+  },
+  "trustedWorkspaces": [
+    "/home/sebastian/src",
+    "/home/sebastian/src/homelab-docker",
+    "/home/sebastian/.dotfiles"
+  ]
+}
