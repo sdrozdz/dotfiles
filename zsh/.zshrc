@@ -72,6 +72,7 @@ alias c='clear'
 
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init --cmd cd zsh)"
 
 # User configuration
 if [ -e $HOME/.zshrc.local ]; then
